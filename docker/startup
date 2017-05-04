@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+# nginx daemonizes...
+service nginx start
+# php-fpm will run in the foreground of the container
+exec php-fpm
